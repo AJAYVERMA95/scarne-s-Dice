@@ -1,36 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <style media="screen">
-        body {
-          padding: 50px;
-          font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-        }
-        a {
-          color: #00B7FF;
-        }
-    </style>
-  </head>
-  <body>
-    <img id="aImage" src="images/dice1.png">
-    <br />
-    <br />
-    <div>
-        <button id="roll">ROLL</button>
-        <button id="hold">HOLD</button>
-        <button id="reset">RESET</button>
-    </div>
-    <br />
-    <br />
-    <div id="score">
-        <div>
-            your score : <div id="userScore">0</div>
+    <head>
+        <style media="screen">
+            body {
+              padding: 50px;
+              font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+            }
+            a {
+              color: #00B7FF;
+            }
+            .align {
+                    text-align: center;
+                }
+            .message {
+                font-size: larger;
+            }
+            .score{
+                display: inline;
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="align message" id="message">
+          <b> YOUR TURN</b>
         </div>
-        <div>
-            opponent score : <div id="compScore">0</div>
+        <br />
+        <br />
+        <div class="align">
+          <img id="aImage" src="images/dice1.png">
         </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="scarnesDice.js"></script></script>
-  </body>
+        <br />
+        <br />
+        <div class="align">
+          <button id="roll">ROLL</button>
+          <button id="hold">HOLD</button>
+          <button id="reset">RESET</button>
+        </div>
+        <br />
+        <br />
+        <div class="align">
+            <div id="userScore">
+                your score : <p class="score">0</p>
+            </div>
+            <div id="compScore">
+                opponent score : <p class="score">0</p>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="scarnesDice.js"></script></script>
+    </body>
 </html>
