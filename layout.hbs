@@ -19,9 +19,42 @@
                 display: inline;
                 font-size: 18px;
             }
+            .game-layout{
+                margin-top: 50px;
+            }
         </style>
     </head>
     <body>
+        <div class="message">
+            <h3 class="align">Scarne's dice</h3>
+            <p>Scarne's Dice is a turn-based dice game where players score points by rolling a
+                die and then:
+            </p>
+            <ul>
+                <li>if they roll a 1, score no points and lose their turn</li>
+                <li>if they roll a 2 to 6:
+                    <ul>
+                        <li>add the rolled value to their points</li>
+                        <li>choose to either reroll or keep their score and end their turn</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>For example, if a player starts their turn and rolls a 6, they can choose to
+                either 'hold' and end their turn, in which case they can add the 6 to their
+                score, or to reroll and potentially score more points.
+            </p>
+            <p>Let's say they decide to roll again, and they get a 4. They now have the option
+                to end their turn and add 10 points (6 + 4) to their score, or to roll again to
+                get even more points.
+            </p>
+            <p>They decide to roll again, but get a 1. Getting a 1 makes the player lose all
+                the points from their turn (so their score is the same as before their turn),
+                and finishes their turn, allowing the second player to begin their turn.
+            </p>
+        </div>
+        <div class="game-layout">
+
+
         <div class="align message" id="message">
           <b> YOUR TURN</b>
         </div>
@@ -41,11 +74,12 @@
         <br />
         <div class="align">
             <div id="userScore">
-                your score : <p class="score">0</p>
+                YOUR SCORE : <p class="score">0</p>
             </div>
             <div id="compScore">
-                opponent score : <p class="score">0</p>
+                COMPUTER'S SCORE : <p class="score">0</p>
             </div>
+        </div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script type="text/javascript" src="scarnesDice.js"></script></script>
