@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
         <style media="screen">
             body {
               padding: 50px;
@@ -21,6 +22,9 @@
             }
             .game-layout{
                 margin-top: 50px;
+            }
+            .display-inline{
+                display: inline-block;
             }
         </style>
     </head>
@@ -53,33 +57,34 @@
             </p>
         </div>
         <div class="game-layout">
+            <div id="userScore" class="col-md-4 align message">
+                <b>YOUR SCORE</b> : <p class="score">0</p>
+            </div>
+
+            <div class="align message col-md-4" id="message">
+              <b> YOUR TURN</b>
+            </div>
+            <div id="compScore" class="col-md-4 align message">
+                <b>COMPUTER'S SCORE</b> : <p class="score">0</p>
+            </div>
+            <br />
+            <br />
+            <div class="align">
+              <img id="aImage" src="images/dice1.png">
+            </div>
+            <br />
+            <br />
+            <div class="align">
+              <button id="roll">ROLL</button>
+              <button id="hold">HOLD</button>
+              <button id="reset">RESET</button>
+            </div>
+            <br />
+            <br />
+            <div class="align">
 
 
-        <div class="align message" id="message">
-          <b> YOUR TURN</b>
-        </div>
-        <br />
-        <br />
-        <div class="align">
-          <img id="aImage" src="images/dice1.png">
-        </div>
-        <br />
-        <br />
-        <div class="align">
-          <button id="roll">ROLL</button>
-          <button id="hold">HOLD</button>
-          <button id="reset">RESET</button>
-        </div>
-        <br />
-        <br />
-        <div class="align">
-            <div id="userScore">
-                YOUR SCORE : <p class="score">0</p>
             </div>
-            <div id="compScore">
-                COMPUTER'S SCORE : <p class="score">0</p>
-            </div>
-        </div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script type="text/javascript" src="scarnesDice.js"></script></script>
